@@ -1,3 +1,8 @@
+/**
+ * Static data for the birthday list. No API or backend.
+ * Each item: id (unique), name, age, image (URL string).
+ * Imported by App.jsx as initial state for the people list.
+ */
 export default [
   {
     id: 1,

@@ -1,4 +1,5 @@
 /* ============= GLOBAL CSS =============== */
+/* Reset + shared variables and base styles used across the app */
 
 *,
 ::after,
@@ -158,6 +159,7 @@ ul {
   color: var(--primary-200);
   background: var(--primary-700);
 }
+/* Full-width button; used by App.jsx "clear all" button */
 .btn-block {
   width: 100%;
 }
@@ -254,6 +256,7 @@ ul {
 }
 
 /* ============= PROJECT CSS =============== */
+/* Birthday Buddy–specific layout and components */
 
 /* optional overwrite */
 
@@ -265,12 +268,14 @@ body {
   border: 2px solid red;
 } */
 
+/* Centers the card on the screen (App.jsx <main>) */
 main {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+/* Wrapper for heading + list + button in App.jsx */
 .container {
   /* border: 2px solid red; */
   width: 90vw;
@@ -284,6 +289,7 @@ main {
 .container h3 {
   margin-bottom: 2rem;
 }
+/* Person.jsx card: avatar left, name/age right; used by .person class */
 .person {
   display: grid;
   grid-template-columns: auto 1fr;
