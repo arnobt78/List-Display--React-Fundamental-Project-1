@@ -1,4 +1,4 @@
-# Birthday Buddy - React Fundamental Project 1
+# List View Display - React, Vite, CSS, JavaScript Fundamental Project 1
 
 <img width="600" alt="Birthday Buddy Screenshot" src="https://github.com/user-attachments/assets/98614497-6519-4a6e-adea-d18e95c81052" />
 
@@ -21,15 +21,15 @@ The project is simple yet powerful as a teaching aid and a starting point for mo
 3. [Project Structure](#project-structure)
 4. [Technologies Used](#technologies-used)
 5. [Getting Started](#getting-started)
-    - [Installation](#installation)
-    - [Running the Project](#running-the-project)
+   - [Installation](#installation)
+   - [Running the Project](#running-the-project)
 6. [Component Walkthrough](#component-walkthrough)
-    - [App.jsx](#appjsx)
-    - [List.jsx](#listjsx)
-    - [Person.jsx](#personjsx)
-    - [data.js](#datajs)
-    - [Styling (index.css)](#styling-indexcss)
-    - [main.jsx](#mainjsx)
+   - [App.jsx](#appjsx)
+   - [List.jsx](#listjsx)
+   - [Person.jsx](#personjsx)
+   - [data.js](#datajs)
+   - [Styling (index.css)](#styling-indexcss)
+   - [main.jsx](#mainjsx)
 7. [Functionality & Logic](#functionality--logic)
 8. [Code Examples](#code-examples)
 9. [Keywords & Concepts](#keywords--concepts)
@@ -88,23 +88,28 @@ Birthday-Buddy--React-Fundamental-Project-1/
 ### Installation
 
 1. **Clone the repository:**
-    ```sh
-    git clone https://github.com/arnobt78/Birthday-Buddy--React-Fundamental-Project-1.git
-    cd Birthday-Buddy--React-Fundamental-Project-1
-    ```
+
+   ```sh
+   git clone https://github.com/arnobt78/Birthday-Buddy--React-Fundamental-Project-1.git
+   cd Birthday-Buddy--React-Fundamental-Project-1
+   ```
+
 2. **Install dependencies:**
-    ```sh
-    npm install
-    ```
+
+   ```sh
+   npm install
+   ```
 
 ---
 
 ### Running the Project
 
 Start the development server:
+
 ```sh
 npm run dev
 ```
+
 Open [http://localhost:5173](http://localhost:5173) (or as shown in your terminal) to view the app in your browser.
 
 ---
@@ -114,6 +119,7 @@ Open [http://localhost:5173](http://localhost:5173) (or as shown in your termina
 ### App.jsx
 
 The main component. Handles:
+
 - Importing the birthday data.
 - Using React’s `useState` to set and manage the list.
 - Rendering the count of birthdays.
@@ -121,10 +127,11 @@ The main component. Handles:
 - Providing a button to clear the list (by setting state to an empty array).
 
 **Example:**
+
 ```jsx
-import { useState } from 'react';
-import data from './data';
-import List from './List';
+import { useState } from "react";
+import data from "./data";
+import List from "./List";
 
 function App() {
   const [people, setPeople] = useState(data);
@@ -150,13 +157,14 @@ export default App;
 Receives the array of people as props. Maps over this array to render a `Person` component for each entry.
 
 **Example:**
+
 ```jsx
-import Person from './Person';
+import Person from "./Person";
 
 const List = ({ people }) => {
   return (
     <>
-      {people.map(person => (
+      {people.map((person) => (
         <Person key={person.id} {...person} />
       ))}
     </>
@@ -173,6 +181,7 @@ export default List;
 Displays a single person’s information (image, name, age). Receives props from `List.jsx`.
 
 **Example:**
+
 ```jsx
 const Person = ({ name, age, image }) => {
   return (
@@ -194,19 +203,21 @@ export default Person;
 ### data.js
 
 Contains an array of people objects. Each object has:
+
 - `id`: Unique identifier
 - `name`: Person’s name
 - `age`: Age
 - `image`: URL to their picture
 
 **Example:**
+
 ```js
 const data = [
   {
     id: 1,
-    name: 'John Doe',
+    name: "John Doe",
     age: 29,
-    image: 'https://randomuser.me/api/portraits/men/1.jpg',
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   // ...more people
 ];
@@ -219,10 +230,12 @@ export default data;
 ### Styling (index.css)
 
 Defines the look and feel of the app using CSS. Includes:
+
 - Variables for colors, fonts, etc.
 - Styling for containers, headings, buttons, people list, images, and responsive design.
 
 **Example:**
+
 ```css
 :root {
   --primary: #f28ab2;
@@ -233,7 +246,7 @@ Defines the look and feel of the app using CSS. Includes:
 body {
   background: var(--primary);
   color: var(--text);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 .container {
   background: var(--secondary);
@@ -241,7 +254,7 @@ body {
   padding: 2rem;
   max-width: 400px;
   margin: 4rem auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 button {
   background: #f28ab2;
@@ -273,16 +286,17 @@ button {
 Entry point: Renders the `<App />` component inside the root div of `index.html`.
 
 **Example:**
-```jsx
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+```jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 ```
 
@@ -304,10 +318,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 ## Code Examples
 
 **Full App.jsx:**
+
 ```jsx
-import { useState } from 'react';
-import data from './data';
-import List from './List';
+import { useState } from "react";
+import data from "./data";
+import List from "./List";
 
 function App() {
   const [people, setPeople] = useState(data);
@@ -327,13 +342,30 @@ export default App;
 ```
 
 **Sample data.js:**
+
 ```js
 const data = [
   {
     id: 1,
-    name: 'John Doe',
+    name: "John Doe",
     age: 29,
-    image: 'https://randomuser.me/api/portraits/men/1.jpg',
+    image: "https://randomuser.me/api/portraits/men/1.jpg"
+    </main>
+  );
+}
+
+export default App;
+```
+
+**Sample data.js:**
+
+```js
+const data = [
+  {
+    id: 1,
+    name: "John Doe",
+    age: 29,
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   // ...more entries
 ];
