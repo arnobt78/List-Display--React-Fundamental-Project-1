@@ -1,4 +1,4 @@
-# List View Display - React, Vite, CSS, JavaScript Fundamental Project 1
+# List View Display - React, Vite, JavaScript, Custom CSS Fundamental Project 1
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.2-blue)](https://react.dev/)
@@ -9,7 +9,7 @@ A beginner-friendly React app that displays a list of people and their birthdays
 
 **Live Demo:** [https://listview-display.vercel.app/](https://listview-display.vercel.app/)
 
-<img width="1688" height="887" alt="Screenshot 2026-03-10 at 16 11 11" src="https://github.com/user-attachments/assets/9b183dc4-dddc-43fc-a071-41f6cdde7779" />
+<img width="1555" height="930" alt="Screenshot 2026-03-10 at 16 21 20" src="https://github.com/user-attachments/assets/cc2d1975-b092-4154-8f36-e5e3f8a7d6e0" />
 
 ## Table of Contents
 
