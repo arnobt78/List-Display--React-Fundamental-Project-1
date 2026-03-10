@@ -9,7 +9,7 @@ A beginner-friendly React app that displays a list of people and their birthdays
 
 **Live Demo:** [https://listview-display.vercel.app/](https://listview-display.vercel.app/)
 
----
+<img width="1688" height="887" alt="Screenshot 2026-03-10 at 16 11 11" src="https://github.com/user-attachments/assets/9b183dc4-dddc-43fc-a071-41f6cdde7779" />
 
 ## Table of Contents
 
